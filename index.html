@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Form 內嵌測試</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #fdfaf5; /* 柔和米白色背景 */
+      color: #444;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .form-frame,
+    .chart-frame {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      background-color: white;
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      flex: 1 1 600px;
+      max-width: 640px;
+    }
+
+    .form-frame:hover,
+    .chart-frame:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #2c3e50;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      min-height: 400px;
+      max-height: 80vh;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 20px;
+      }
+
+      .form-frame,
+      .chart-frame {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Google Form 內嵌測試</h1>
+
+  <div class="container">
+    <div class="form-frame">
+      <h2>📋 填寫表單</h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNliitfhxyCXSb3WRm42alM_ToR6eCslagwneMIwKLHsgDPg/viewform?embedded=true" allowfullscreen>載入中…</iframe>
+    </div>
+
+    <div class="chart-frame">
+      <h2>📊 即時圖表</h2>
+      <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTCxBkqzzk_v3DYJZAKGQyrlVU0X7waWk-v0RfD4O0-JCRGSxa3SSjEgjd7yXVxAK2gZgUR8lRNx3HE/pubchart?oid=113934506&amp;format=interactive"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
